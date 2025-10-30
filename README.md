@@ -22,7 +22,7 @@ The purpose of this work is to understand the basics of Natural Language Process
 - gensim
 - openpyxl
 
-Insatll essentials:
+Install essentials:
 
     pip install pandas gensim openpyxl regex ftfy scikit-learn
 
