@@ -4,6 +4,12 @@ Data cleaning, sentiment labeling, domain awareness, corpus merging, word embedd
 ## ABSTRACT
 The purpose of this work is to understand the basics of Natural Language Processing (NLP). In this project, we gained experience in data preprocessing, sentiment annotation, and word embedding. We used two different embedding models and analyzed their outputs on Azerbaijani language datas.
 
+	•	Data cleaning, normalization, and sentiment labeling
+	•	Domain-aware preprocessing (news, social, reviews)
+	•	Merging datasets into a single corpus
+	•	Training Word2Vec and FastText models
+	•	Comparing their performance using lexical coverage, synonym/antonym similarity, and nearest-neighbor quality
+
 # Contents
 - [SETUP](#setup)
 - [DATASETS](#datasets)
@@ -12,7 +18,9 @@ The purpose of this work is to understand the basics of Natural Language Process
 - [ACKNOWLEDGMENT](#acknowledgment)
 
 ## SETUP 
-[Last version](#lastversion):  https://github.com/isoatalay/Ceng442-assignment1-Ismail.git
+[Last version](#lastversion):  
+
+    git clone https://github.com/isoatalay/Ceng442-assignment1-Ismail.git
 
 - Python 3
 - pandas
@@ -30,7 +38,27 @@ Install essentials:
 https://drive.google.com/file/d/1_nLlOQV1cYFHyN69fkYnnA5Grq-TvPtY/view?usp=sharing
 
 ## DOCUMENTATION
+> Text Normalization: normalize_text_az()
 
+> Domain Detection: detect_domain()
+
+> Domain-Specific Normalization: domain_specific_normalize()
+
+> Domain Tag Token: add_domain_tag()
+
+> Sentiment Label Mapping: map_sentiment_value()
+
+> Per-File Processing: process_file()
+
+> Corpus Builder: build_corpus_txt()
+
+> Embedding Training (Word2Vec & FastText)
+
+> Model Comparison
+
+![Word2Vec Model Architecture](word2vec.png)
+![FastText Model Illustration](fastText.png)
+![FastText vs Word2Vec Comparison](fastText-vs.-Word2Vec.png)
 ## CONTRIBUTORS
 Beyhan Kandemir
 
