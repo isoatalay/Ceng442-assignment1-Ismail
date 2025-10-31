@@ -136,7 +136,7 @@ FastText works better in agglutinative languages ​​like Azerbaijani.
 [Last version](#lastversion):  
 
     git clone https://github.com/isoatalay/Ceng442-assignment1-Ismail.git
-
+ Run Order  ① `data_processing.ipynb` → ② `embedding_training_evaulation.ipynb` 
 - Python 3
 - pandas
 - regex
@@ -144,6 +144,7 @@ FastText works better in agglutinative languages ​​like Azerbaijani.
 - ftfy
 - gensim
 - openpyxl
+- Jupyter NoteBook
 
 
         python3.12.3
@@ -151,6 +152,7 @@ FastText works better in agglutinative languages ​​like Azerbaijani.
         openpyxl-3.1.2
         ftfy-6.3.1
         seed = 42
+  		jupyter notebook 7.2.2
 
 
 
