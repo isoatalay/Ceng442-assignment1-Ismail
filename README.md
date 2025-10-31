@@ -5,9 +5,9 @@ Data cleaning, sentiment labeling, domain awareness, corpus merging, word embedd
 
 
 # Contents
-- [DATA & GOAL](#datagoal)
+- [DATA & GOAL](#data--goal)
 - [PREPROCESSING](#preprocessing)
-- [MINI CHALLENGES](#minichallenges)
+- [MINI CHALLENGES](#mini-challenges)
 - [DOMAIN AWARE](#domainaware)
 - [EMBEDING](#embeding)
 - [REPRODUCIBILITY](#reproducibility)
