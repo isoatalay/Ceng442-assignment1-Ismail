@@ -124,9 +124,16 @@ We trained Word2vec (Skip-gram) and FasTest models using this dataset. The analy
 Word2Vec works by looking at how often words occur in text. 
 
 ![Word2Vec Model Architecture](word2vec.png)
+
+
 FastText, on the other hand, breaks words into smaller parts (subwords). 
+
+
 ![FastText Model Illustration](fastText.png)
+
+
 ![FastText vs Word2Vec Comparison](fastText-vs.-Word2Vec.png)
+
 
 FastText works better in agglutinative languages ​​like Azerbaijani.
 
@@ -135,7 +142,9 @@ FastText works better in agglutinative languages ​​like Azerbaijani.
 
 [Last version](#lastversion):  
 
-    git clone https://github.com/isoatalay/Ceng442-assignment1-Ismail.git
+    git clone https://github.com/isoatalay/Ceng442-assignment1-Ismail-Beyhan.git
+
+	
 Run Order  ① `data_processing.ipynb` → ② `embedding_training_evaulation.ipynb`.  
   
 Why this Order?  
