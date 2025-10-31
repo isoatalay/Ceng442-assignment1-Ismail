@@ -136,7 +136,27 @@ FastText works better in agglutinative languages ​​like Azerbaijani.
 [Last version](#lastversion):  
 
     git clone https://github.com/isoatalay/Ceng442-assignment1-Ismail.git
- Run Order  ① `data_processing.ipynb` → ② `embedding_training_evaulation.ipynb` 
+Run Order  ① `data_processing.ipynb` → ② `embedding_training_evaulation.ipynb`.  
+  
+Why this Order?  
+This two-step order enforces *clean data → deterministic training*.
+
+1) **data_processing.ipynb**
+   - Reads **data/raw/** and produces *outputs* in data/clean/:
+     - Two-column files: cleaned_text, sentiment_value
+     - Domain-tagged corpus_all.txt
+   - Preprocess multiple Azerbaijani text datasets for sentiment analysis by cleaning, normalizing, and labeling data .
+  
+
+2) **embedding_training_evaluation.ipynb**
+   - Take the files that are created in data/clean/ (5 Cleaned excel files and corpus_all.txt).
+   - Trains Word2Vec/FastText using exactly the cleaned tokens
+   - compare both model with some metrics (coverage, synonym/antonym separation, NN lists).
+   - Uses fixed *seed (42)* and recorded library versions (Python, gensim, openpyxl, ftfy, Jupyter) for *reproducibility*.
+
+
+
+  
 - Python 3
 - pandas
 - regex
