@@ -155,6 +155,8 @@ Installed requirements:
 Ran preprocessing to produce data/clean/*_2col.xlsx and data/clean/corpus_all.txt.
 Trained Word2Vec and FastText; saved models under embeddings/.
 
+## CONCLUTION
+
 ## CONTRIBUTORS
 - [@Beyhan Kandemir](https://github.com/Beykn) 
 - [@İsmail Atalay](https://github.com/isoatalay)
