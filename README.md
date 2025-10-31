@@ -146,9 +146,9 @@ FastText works better in agglutinative languages ​​like Azerbaijani.
 - openpyxl
 
 
-        python3.12
+        python3.12.3
         gensim-4.4.0
-        openpyxl-3.1.5
+        openpyxl-3.1.2
         ftfy-6.3.1
         seed = 42
 
