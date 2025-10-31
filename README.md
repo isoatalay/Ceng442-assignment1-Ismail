@@ -137,6 +137,10 @@ FastText, on the other hand, breaks words into smaller parts (subwords).
 
 FastText works better in agglutinative languages ​​like Azerbaijani.
 
+Embedings: 
+
+		https://drive.google.com/drive/folders/1GpbKV5XZH6bMsABkZUf58VEupmi3c7L3?usp=sharing
+
 ## REPRODUCIBILITY
 
 
