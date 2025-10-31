@@ -79,38 +79,37 @@ We trained Word2vec (Skip-gram) and FasTest models using this dataset. The analy
         Saved FaxtText model
 
         == Lexical coverage (per dataset) ==
-        data/clean/labeled-sentiment_2col.xlsx: W2V=0.932, FT(vocab)=0.932
-        data/clean/test__1__2col.xlsx: W2V=0.987, FT(vocab)=0.987
-        data/clean/train__3__2col.xlsx: W2V=0.990, FT(vocab)=0.990
-        data/clean/train-00000-of-00001_2col.xlsx: W2V=0.943, FT(vocab)=0.943
-        data/clean/merged_dataset_CSV__1__2col.xlsx: W2V=0.949, FT(vocab)=0.949
+		data/clean/labeled-sentiment_2col.xlsx: W2V=0.932, FT(vocab)=0.932
+		data/clean/test__1__2col.xlsx: W2V=0.987, FT(vocab)=0.987
+		data/clean/train__3__2col.xlsx: W2V=0.990, FT(vocab)=0.990
+		data/clean/train-00000-of-00001_2col.xlsx: W2V=0.943, FT(vocab)=0.943
+		data/clean/merged_dataset_CSV__1__2col.xlsx: W2V=0.949, FT(vocab)=0.949
 
 
-                == Similarity ==
-                
-        Synonyms: W2V=0.364, FT=0.439
-        Antonyms: W2V=0.328, FT=0.408
-        Separation: W2V=0.036, FT=0.032
-
-                == Nearest Neighbors ==
-        W2V NN for 'yaxşı': ['yaxshi', '<RATING_POS>', 'iyi', 'yaxsı', 'artsa']
-        FT NN for 'yaxşı': ['yaxşıı', 'yaxşıkı', 'yaxşıca', 'yaxş', 'yaxşıya']
-        W2V NN for 'pis': ['bugunki', 'günd', '<RATING_NEG>', 'yaxşıdır_NEG', 'xalçalardan']
-        FT NN for 'pis': ['piis', 'pi', 'pisdii', 'pixlr', 'pisleşdi']
-        W2V NN for 'çox': ['çoox', 'çöx', 'gözəldir', 'bəyənilsin', 'cooxx']
-        FT NN for 'çox': ['çoxçox', 'çoxx', 'çoxh', 'ço', 'çoh']
-        W2V NN for 'bahalı': ['villaları', 'portretlerinə', 'yaxtaları', 'metallarla', 'radiusda']
-        FT NN for 'bahalı': ['bahalıı', 'bahalısı', 'bahalıq', 'baharlı', 'pahalı']
-        W2V NN for 'ucuz': ['şeytanbazardan', 'düzəltdirilib', 'qiymete', 'elektik', 'qiymətə']
-        FT NN for 'ucuz': ['ucuzu', 'ucuza', 'ucuzdu', 'ucuzluğa', 'ucuzdur']
-        W2V NN for 'mükəmməl': ['kəliməylə', 'möhtəşəmm', 'mukəmməl', 'tamamlayır', 'süjetli']
-        FT NN for 'mükəmməl': ['mükəmməll', 'mükəməl', 'mukəmməl', 'mükəmməldi', 'mükəmməlsiz']
-        W2V NN for 'dəhşət': ['xalçalardan', 'birda', 'ayranları', 'yelləndi', 'treylerdə']
-        FT NN for 'dəhşət': ['dəhşətdü', 'dəhşətə', 'dəhşəti', 'dəhşətizm', 'dəhşətdi']
-        W2V NN for '<PRICE>': []
-        FT NN for '<PRICE>': ['cruise', 'recebzade', 'reeceep', 'light', 'cokubse']
-        W2V NN for '<RATING_POS>': ['deneyin', 'uyqulama', 'internetli', 'uygulama', 'hak']
-        FT NN for '<RATING_POS>': ['<RATING_NEG>', 'süperr', 'çookk', 'cöx', 'süper']
+         == Similarity ==
+		Synonyms: W2V=0.355, FT=0.442
+		Antonyms: W2V=0.349, FT=0.436
+		Separation: W2V=0.007, FT=0.005
+		
+		== Nearest Neighbors ==
+		  W2V NN for 'yaxşı': ['<RATING_POS>', 'iyi', 'yaxshi', 'yaxsı', 'awsome']
+		  FT NN for 'yaxşı': ['yaxşıı', 'yaxşıkı', 'yaxşıca', 'yaxş', 'yaxşıya']
+		  W2V NN for 'pis': ['vərdişlərə', 'lire', 'kardeşi', 'xalçalardan', 'günd']
+		  FT NN for 'pis': ['piis', 'pi', 'pisdii', 'pixlr', 'pisi']
+		  W2V NN for 'çox': ['bəyənilsin', 'çoox', 'çöx', 'gözəldir', 'əladir']
+		  FT NN for 'çox': ['çoxçox', 'çoxx', 'çoxh', 'ço', 'çoh']
+		  W2V NN for 'bahalı': ['yaxtaları', 'metallarla', 'villaları', 'radiusda', 'portretlerinə']
+		  FT NN for 'bahalı': ['bahalıı', 'bahalısı', 'bahalıq', 'baharlı', 'pahalı']
+		  W2V NN for 'ucuz': ['düzəltdirilib', 'baha', 'qiymete', 'keyfiyetli', 'sududu']
+		  FT NN for 'ucuz': ['ucuzu', 'ucuza', 'ucuzdu', 'ucuzluğa', 'ucuzdur']
+		  W2V NN for 'mükəmməl': ['möhtəşəmm', 'kəliməylə', 'yaradilanlarin', 'mukəmməl', 'möhdəşəm']
+		  FT NN for 'mükəmməl': ['mükəmməll', 'mükəməl', 'mükəmməldi', 'mukəmməl', 'mükəmməlsiz']
+		  W2V NN for 'dəhşət': ['xalçalardan', 'birda', 'ayranları', 'açdıq', 'təsirlidi']
+		  FT NN for 'dəhşət': ['dəhşətdü', 'dəhşətə', 'dəhşətizm', 'dəhşəti', 'dəhşətdi']
+		  W2V NN for '<PRICE>': []
+		  FT NN for '<PRICE>': ['cokubse', 'reeceep', 'engiltdere', 'ıngiltere', 'flight']
+		  W2V NN for '<RATING_POS>': ['deneyin', 'uygulama', 'süper', 'çook', 'iternetsiz']
+		  FT NN for '<RATING_POS>': ['<RATING_NEG>', 'çookk', 'süperr', 'çokk', 'çook']
 
 Word2Vec works by looking at how often words occur in text. 
 
