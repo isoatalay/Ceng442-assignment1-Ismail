@@ -8,11 +8,11 @@ Data cleaning, sentiment labeling, domain awareness, corpus merging, word embedd
 - [DATA & GOAL](#data--goal)
 - [PREPROCESSING](#preprocessing)
 - [MINI CHALLENGES](#mini-challenges)
-- [DOMAIN AWARE](#domainaware)
-- [EMBEDING](#embeding)
+- [DOMAIN AWARE](#domain-aware)
+- [EMBEDDING](#embedding)
 - [REPRODUCIBILITY](#reproducibility)
-- [CONCLUTION](#conclution)
-- [CONTRIBUTORS](#contributers)
+- [CONCLUSION](#conclusion)
+- [CONTRIBUTORS](#contributors)
 - [ACKNOWLEDGMENT](#acknowledgment)
 
 ## DATA & GOAL
@@ -67,7 +67,7 @@ We read the data files and performed the necessary cleaning, normalization, and 
 
 
 
-## EMBEDING
+## EMBEDDING
 
 We trained Word2vec (Skip-gram) and FasTest models using this dataset. The analysis shows that FastTest is better at grouping synonyms, but both models still struggle to distinguish antonyms.
 
@@ -186,7 +186,23 @@ Installed requirements:
 Ran preprocessing to produce data/clean/*_2col.xlsx and data/clean/corpus_all.txt.
 Trained Word2Vec and FastText; saved models under embeddings/.
 
-## CONCLUTION
+## CONCLUSION
+
+In this project, we compare the Word2Vec and FastText models.
+The results show that these two models have different characteristics in terms of word similarity and nearest neighbors.
+
+The FastText model focuses on the roots and affixes of words, and it can easily capture variations such as “yaxşıı”, “pisdii”, and “çoxx”.
+On the other hand, the Word2Vec model focuses on meaning and can easily capture semantically similar words like “iyi”, “süper”, and “gözəldir”.
+
+When we look at the overall results, FastText gives slightly higher similarity values.
+This shows that FastText is more sensitive to morphological and spelling differences.
+
+In general:
+	•	Word2Vec performs better at capturing semantic similarities.
+	•	FastText performs better at capturing morphological variations in words.
+
+At the end of the project, we can say that languages like Azerbaijani and Turkish are better suited to the FastText model.
+The Word2Vec model, on the other hand, provides advantages in capturing meaningful relationships between words.
 
 ## CONTRIBUTORS
 - [@Beyhan Kandemir](https://github.com/Beykn) 
