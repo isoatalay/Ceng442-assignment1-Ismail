@@ -7,6 +7,7 @@ Data cleaning, sentiment labeling, domain awareness, corpus merging, word embedd
 # Contents
 - [DATA & GOAL](#datagoal)
 - [PREPROCESSING](#preprocessing)
+- [MINI CHALLENGES](#minichallenges)
 - [DOMAIN AWARE](#domainaware)
 - [EMBEDING](#embeding)
 - [REPRODUCIBILITY](#reproducibility)
@@ -32,6 +33,15 @@ Data:
 > Text Normalization :
 
 In this part we gain to make a text meaningful and consistent . So model can train it easly. In this way  kind a models like Word2Vec, FastText etc. can established semantic relationship. We also create a domain awareness in this section to help the model detect and distinguish different contexts such as “news language,” “social media language,” and “product review language.”
+
+## MINI CHALLENGES
+| Challenge | Implementation | Observation |
+|------------|----------------|--------------|
+| *Emoji mapping* | EMO_MAP dictionary | Adds emotional hints to text. |
+| *Hashtag split* | Regex + camel-case | Handles the words with hastag also separate the words that are written in camelcase. |
+| *Negation scope* | _NEG flag for next 3 tokens | Strengthens polarity marking which is also helpful for sentiment labeling|
+| *Deasciify* | SLANG_MAP replacement | ≈3 % token correction. |
+| *Stopwords* | Manually verified list | Some negative words saved from stopwords intentionally to save labeling accuracy. |
 
 
 ## DOMAIN AWARE
