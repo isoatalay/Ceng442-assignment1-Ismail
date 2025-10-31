@@ -48,6 +48,15 @@ Domain Label Symbol: This helps understand the different meanings of words, as s
 
 We used the different datasets and than standardizes labels from different datasets into a uniform numeric sentiment value  (Negative = 0.0, Neutral = 0.5, Positive = 1.0) for training.
 
+
+
+        Saved: data/clean/labeled-sentiment_2col.xlsx (rows=2955)
+        Saved: data/clean/test__1__2col.xlsx (rows=4198)
+        Saved: data/clean/train__3__2col.xlsx (rows=19557)
+        Saved: data/clean/train-00000-of-00001_2col.xlsx (rows=41756)
+        Saved: data/clean/merged_dataset_CSV__1__2col.xlsx (rows=55662)
+        Wrote data/clean/corpus_all.txt with 124353 lines
+
 > Per-File Processing & Corpus Builder: 
 
 We read the data files and performed the necessary cleaning, normalization, and labeling. As a result, we obtained the cleaned_text and sentiment_value values. To prevent the model from learning the same data over and over, we remove useless columns, null cells and duplicates to create a single corpus. This resulted in a clean and consistent text for model training.
@@ -56,9 +65,56 @@ We read the data files and performed the necessary cleaning, normalization, and 
 
 We trained Word2vec (Skip-gram) and FasTest models using this dataset. The analysis shows that FastTest is better at grouping synonyms, but both models still struggle to distinguish antonyms.
 
-        Synonyms: W2V=0.356, FT=0.435
-        Antonyms: W2V=0.343, FT=0.435
-        Separation: W2V=0.013, FT=0.001
+        Exception ignored in: 'gensim.models.word2vec_inner.our_dot_float'
+        Exception ignored in: 'gensim.models.word2vec_inner.our_dot_float'
+        Exception ignored in: 'gensim.models.word2vec_inner.our_dot_float'
+        Exception ignored in: 'gensim.models.word2vec_inner.our_dot_float'
+        Exception ignored in: 'gensim.models.word2vec_inner.our_dot_float'
+        Exception ignored in: 'gensim.models.word2vec_inner.our_dot_float'
+        Exception ignored in: 'gensim.models.word2vec_inner.our_dot_float'
+        Exception ignored in: 'gensim.models.word2vec_inner.our_dot_float'
+        Saved Word2Vec model
+
+
+        Exception ignored in: 'gensim.models.word2vec_inner.our_dot_float'
+        Exception ignored in: 'gensim.models.word2vec_inner.our_dot_float'
+        Exception ignored in: 'gensim.models.word2vec_inner.our_dot_float'
+        Exception ignored in: 'gensim.models.word2vec_inner.our_dot_float'
+        Saved FaxtText model
+
+        == Lexical coverage (per dataset) ==
+        data/clean/labeled-sentiment_2col.xlsx: W2V=0.932, FT(vocab)=0.932
+        data/clean/test__1__2col.xlsx: W2V=0.987, FT(vocab)=0.987
+        data/clean/train__3__2col.xlsx: W2V=0.990, FT(vocab)=0.990
+        data/clean/train-00000-of-00001_2col.xlsx: W2V=0.943, FT(vocab)=0.943
+        data/clean/merged_dataset_CSV__1__2col.xlsx: W2V=0.949, FT(vocab)=0.949
+
+
+                == Similarity ==
+                
+        Synonyms: W2V=0.364, FT=0.439
+        Antonyms: W2V=0.328, FT=0.408
+        Separation: W2V=0.036, FT=0.032
+
+                == Nearest Neighbors ==
+        W2V NN for 'yaxşı': ['yaxshi', '<RATING_POS>', 'iyi', 'yaxsı', 'artsa']
+        FT NN for 'yaxşı': ['yaxşıı', 'yaxşıkı', 'yaxşıca', 'yaxş', 'yaxşıya']
+        W2V NN for 'pis': ['bugunki', 'günd', '<RATING_NEG>', 'yaxşıdır_NEG', 'xalçalardan']
+        FT NN for 'pis': ['piis', 'pi', 'pisdii', 'pixlr', 'pisleşdi']
+        W2V NN for 'çox': ['çoox', 'çöx', 'gözəldir', 'bəyənilsin', 'cooxx']
+        FT NN for 'çox': ['çoxçox', 'çoxx', 'çoxh', 'ço', 'çoh']
+        W2V NN for 'bahalı': ['villaları', 'portretlerinə', 'yaxtaları', 'metallarla', 'radiusda']
+        FT NN for 'bahalı': ['bahalıı', 'bahalısı', 'bahalıq', 'baharlı', 'pahalı']
+        W2V NN for 'ucuz': ['şeytanbazardan', 'düzəltdirilib', 'qiymete', 'elektik', 'qiymətə']
+        FT NN for 'ucuz': ['ucuzu', 'ucuza', 'ucuzdu', 'ucuzluğa', 'ucuzdur']
+        W2V NN for 'mükəmməl': ['kəliməylə', 'möhtəşəmm', 'mukəmməl', 'tamamlayır', 'süjetli']
+        FT NN for 'mükəmməl': ['mükəmməll', 'mükəməl', 'mukəmməl', 'mükəmməldi', 'mükəmməlsiz']
+        W2V NN for 'dəhşət': ['xalçalardan', 'birda', 'ayranları', 'yelləndi', 'treylerdə']
+        FT NN for 'dəhşət': ['dəhşətdü', 'dəhşətə', 'dəhşəti', 'dəhşətizm', 'dəhşətdi']
+        W2V NN for '<PRICE>': []
+        FT NN for '<PRICE>': ['cruise', 'recebzade', 'reeceep', 'light', 'cokubse']
+        W2V NN for '<RATING_POS>': ['deneyin', 'uyqulama', 'internetli', 'uygulama', 'hak']
+        FT NN for '<RATING_POS>': ['<RATING_NEG>', 'süperr', 'çookk', 'cöx', 'süper']
 
 Word2Vec works by looking at how often words occur in text. 
 
